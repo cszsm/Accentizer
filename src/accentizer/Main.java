@@ -1,7 +1,6 @@
 package accentizer;
 
-import java.io.*;
-import java.util.Scanner;
+import java.io.FileNotFoundException;
 
 /**
  * Created by zscse on 2016. 02. 25..
@@ -16,9 +15,9 @@ public class Main {
             return;
         }
 
-        String text = "Mendoza es Gabriel megprobalja megvedeni a kozosseget a portugal koloniak kegyetlensegeitol, amelyek megprobaljak rabszolgava tenni a guaranikat a madridi szerzodes altal garantalt uj hatalmuk segitsegevel.";
-        System.out.println(text + " =>");
-        accentizer.accentize(text);
-        // "src/resources/trees/a
+        for (String word :
+                args) {
+            accentizer.accentize(word);
+        }
     }
 }

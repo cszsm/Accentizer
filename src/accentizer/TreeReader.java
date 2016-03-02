@@ -3,7 +3,6 @@ package accentizer;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -45,7 +44,7 @@ public class TreeReader {
             rightIndex = Integer.valueOf(strings[2]);
 
             leaf = false;
-            if(leftIndex == -1 && rightIndex == -1) {
+            if (leftIndex == -1 && rightIndex == -1) {
                 label = Integer.valueOf(strings[3]);
                 leaf = true;
             } else {

@@ -1,7 +1,5 @@
 package accentizer;
 
-import sun.reflect.generics.tree.Tree;
-
 import java.io.FileNotFoundException;
 import java.util.*;
 
@@ -52,10 +50,10 @@ public class Accentizer {
         int inputPosition = window;
         for (int i = fullWindow; i < paddedText.length(); i++) {
             char middle = slideWindow.get(window);
-            if(accentMap.containsKey(middle)) {
+            if (accentMap.containsKey(middle)) {
                 int label = trees.get(middle).classify(slideWindow);
 
-                if(Character.isUpperCase(paddedText.charAt(inputPosition))) {
+                if (Character.isUpperCase(paddedText.charAt(inputPosition))) {
                     System.out.print(upperAccentMap.get(middle).get(label));
                 } else {
                     System.out.print(accentMap.get(middle).get(label));

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Accentizer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Accentizer_jar</output-path>
+    <root id="archive" name="Accentizer.jar">
+      <element id="module-output" name="Accentizer" />
+    </root>
+  </artifact>
+</component>
