@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by zscse on 2016. 02. 24..
  */
-public class DecisionTree {
+class DecisionTree {
     private List<Node> tree;
     private int window;
 

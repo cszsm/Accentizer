@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * Created by zscse on 2016. 02. 28..
  */
-public class TreeReader {
+class TreeReader {
 
     public DecisionTree readFromFile(String path) throws FileNotFoundException {
         ArrayList<Node> tree = new ArrayList<>();

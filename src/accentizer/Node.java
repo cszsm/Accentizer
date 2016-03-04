@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * Created by zscse on 2016. 02. 24..
  */
-public class Node {
+class Node {
     private boolean leaf;
     private char c;
     private int position;

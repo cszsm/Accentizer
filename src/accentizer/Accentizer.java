@@ -37,7 +37,8 @@ public class Accentizer {
         }
     }
 
-    public void accentize(String text) {
+    public String accentize(String text) {
+        String result = "";
         String paddedText = padText(text);
 
         int fullWindow = 2 * window + 1;
@@ -54,12 +55,18 @@ public class Accentizer {
                 int label = trees.get(middle).classify(slideWindow);
 
                 if (Character.isUpperCase(paddedText.charAt(inputPosition))) {
-                    System.out.print(upperAccentMap.get(middle).get(label));
+                    result += upperAccentMap.get(middle).get(label);
+//                    result.add(upperAccentMap.get(middle).get(label));
+//                    System.out.print(upperAccentMap.get(middle).get(label));
                 } else {
-                    System.out.print(accentMap.get(middle).get(label));
+                    result += accentMap.get(middle).get(label);
+//                    result.add(accentMap.get(middle).get(label));
+//                    System.out.print(accentMap.get(middle).get(label));
                 }
             } else {
-                System.out.print(paddedText.charAt(inputPosition));
+                result += paddedText.charAt(inputPosition);
+//                result.add(paddedText.charAt(inputPosition));
+//                System.out.print(paddedText.charAt(inputPosition));
             }
 
             inputPosition++;
@@ -68,7 +75,8 @@ public class Accentizer {
             slideWindow.addLast(norm);
             slideWindow.removeFirst();
         }
-        System.out.println();
+//        System.out.println();
+        return result;
     }
 
     private Map<Character, List<String>> initializeAccentMap() {
