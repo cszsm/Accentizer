@@ -1,14 +1,15 @@
 package accentizer;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  * Created by zscse on 2016. 02. 28..
  */
-class TreeReader {
+public class TreeReader {
+
+    // NOTE: need a method that closes the Scanner or BufferedReader
 
     public DecisionTree readFromFile(String path) throws FileNotFoundException {
         ArrayList<Node> tree = new ArrayList<>();
@@ -22,30 +23,31 @@ class TreeReader {
 
         scanner.nextLine();
 
-        String nextLine;
+        String line;
         boolean leaf;
         char c;
         int position;
         int leftIndex;
         int rightIndex;
         int label;
+        String[] words;
 
         while (scanner.hasNextLine()) {
-            nextLine = scanner.nextLine();
+            line = scanner.nextLine();
 
-            c = nextLine.charAt(0);
+            c = line.charAt(0);
 
-            nextLine = nextLine.substring(2);
+            line = line.substring(2);
 
-            String[] strings = nextLine.split(" ");
+            words = line.split(" ");
 
-            position = Integer.valueOf(strings[0]);
-            leftIndex = Integer.valueOf(strings[1]);
-            rightIndex = Integer.valueOf(strings[2]);
+            position = Integer.valueOf(words[0]);
+            leftIndex = Integer.valueOf(words[1]);
+            rightIndex = Integer.valueOf(words[2]);
 
             leaf = false;
             if (leftIndex == -1 && rightIndex == -1) {
-                label = Integer.valueOf(strings[3]);
+                label = Integer.valueOf(words[3]);
                 leaf = true;
             } else {
                 label = -1;
@@ -54,6 +56,27 @@ class TreeReader {
             tree.add(new Node(leaf, c, position, leftIndex, rightIndex, label, window));
         }
 
+        return new DecisionTree(tree, window);
+    }
+
+    public DecisionTree readInputStream(String path) throws IOException {
+        ArrayList<Node> tree = new ArrayList<>();
+
+        FileInputStream fileInputStream = new FileInputStream(path);
+        InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+        String line = bufferedReader.readLine();
+        String[] words = line.split(" ");
+        int nodeCount = Integer.valueOf(words[0]);
+        tree.ensureCapacity(nodeCount);
+        int window = Integer.valueOf(words[1]);
+
+        line = bufferedReader.readLine();
+        while (line != null) {
+            tree.add(new Node(line, window));
+            line = bufferedReader.readLine();
+        }
 
         return new DecisionTree(tree, window);
     }

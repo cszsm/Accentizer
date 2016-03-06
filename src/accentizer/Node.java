@@ -23,7 +23,28 @@ class Node {
         this.label = label;
         this.window = window;
 
-        leaf = (left == -1 && right == -1);
+        this.leaf = (left == -1 && right == -1);
+    }
+
+    public Node(String rawData, int window) {
+        c = rawData.charAt(0);
+
+        rawData = rawData.substring(2);
+
+        String[] words = rawData.split(" ");
+        position = Integer.valueOf(words[0]);
+        left = Integer.valueOf(words[1]);
+        right = Integer.valueOf(words[2]);
+
+        leaf = false;
+        if (left == -1 && right == -1) {
+            label = Integer.valueOf(words[3]);
+            leaf = true;
+        } else {
+            label = -1;
+        }
+
+        this.window = window;
     }
 
     public boolean isLeaf() {

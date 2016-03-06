@@ -1,6 +1,7 @@
 package accentizer;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -23,7 +24,7 @@ public class Accentizer {
         window = 4;
     }
 
-    public void load(String baseDir) throws FileNotFoundException {
+    public void load(String baseDir) throws IOException {
         // I don't know yet if the iteration order is relevant
         for (Map.Entry<Character, List<String>> vowels :
                 accentMap.entrySet()) {
@@ -32,13 +33,14 @@ public class Accentizer {
 
             TreeReader treeReader = new TreeReader();
             DecisionTree decisionTree = treeReader.readFromFile(fileName);
+//            DecisionTree decisionTree = treeReader.readInputStream(fileName);
             trees.put(latinizedVowel, decisionTree);
 //            trees.get(latinizedVowel).readFromFile(fileName);
         }
     }
 
     public String accentize(String text) {
-        String result = "";
+        String result = "ver_1.0 ";
         String paddedText = padText(text);
 
         int fullWindow = 2 * window + 1;
