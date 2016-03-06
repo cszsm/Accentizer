@@ -2,6 +2,7 @@ package accentizer;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.*;
 
 /**
@@ -32,15 +33,24 @@ public class Accentizer {
             String fileName = baseDir + "/" + latinizedVowel;
 
             TreeReader treeReader = new TreeReader();
-            DecisionTree decisionTree = treeReader.readFromFile(fileName);
-//            DecisionTree decisionTree = treeReader.readInputStream(fileName);
+//            DecisionTree decisionTree = treeReader.readFromFile(fileName);
+            DecisionTree decisionTree = treeReader.readInputStream(fileName);
             trees.put(latinizedVowel, decisionTree);
 //            trees.get(latinizedVowel).readFromFile(fileName);
         }
     }
 
+    public void load(char c, InputStream inputStream) throws IOException {
+        TreeReader treeReader = new TreeReader();
+        trees.put(c, treeReader.readInputSream(inputStream));
+    }
+
+    public Set<Character> getVowels() {
+        return trees.keySet();
+    }
+
     public String accentize(String text) {
-        String result = "ver_1.0 ";
+        String result = " ";
         String paddedText = padText(text);
 
         int fullWindow = 2 * window + 1;

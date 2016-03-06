@@ -7,7 +7,9 @@ import java.util.Scanner;
 /**
  * Created by zscse on 2016. 02. 28..
  */
-public class TreeReader {
+class TreeReader {
+
+    private Closeable closeable;
 
     // NOTE: need a method that closes the Scanner or BufferedReader
 
@@ -16,55 +18,31 @@ public class TreeReader {
 
         File file = new File(path);
         Scanner scanner = new Scanner(file);
+        closeable = scanner;
 
         int nodeCount = scanner.nextInt();
         tree.ensureCapacity(nodeCount);
         int window = scanner.nextInt();
 
         scanner.nextLine();
-
-        String line;
-        boolean leaf;
-        char c;
-        int position;
-        int leftIndex;
-        int rightIndex;
-        int label;
-        String[] words;
-
         while (scanner.hasNextLine()) {
-            line = scanner.nextLine();
-
-            c = line.charAt(0);
-
-            line = line.substring(2);
-
-            words = line.split(" ");
-
-            position = Integer.valueOf(words[0]);
-            leftIndex = Integer.valueOf(words[1]);
-            rightIndex = Integer.valueOf(words[2]);
-
-            leaf = false;
-            if (leftIndex == -1 && rightIndex == -1) {
-                label = Integer.valueOf(words[3]);
-                leaf = true;
-            } else {
-                label = -1;
-            }
-
-            tree.add(new Node(leaf, c, position, leftIndex, rightIndex, label, window));
+            tree.add(new Node(scanner.nextLine(), window));
         }
 
         return new DecisionTree(tree, window);
     }
 
     public DecisionTree readInputStream(String path) throws IOException {
+        FileInputStream fileInputStream = new FileInputStream(path);
+        return readInputSream(fileInputStream);
+    }
+
+    public DecisionTree readInputSream(InputStream inputStream) throws IOException {
         ArrayList<Node> tree = new ArrayList<>();
 
-        FileInputStream fileInputStream = new FileInputStream(path);
-        InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+        InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        closeable = bufferedReader;
 
         String line = bufferedReader.readLine();
         String[] words = line.split(" ");
@@ -79,5 +57,9 @@ public class TreeReader {
         }
 
         return new DecisionTree(tree, window);
+    }
+
+    public void close() throws IOException {
+        closeable.close();
     }
 }

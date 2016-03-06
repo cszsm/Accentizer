@@ -7,13 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c2b7837-38de-4200-940a-1719a3621dd8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/accentizer/Main.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Accentizer/accentizer/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/accentizer/Main.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Accentizer_jar/Accentizer.jar" afterPath="$PROJECT_DIR$/out/artifacts/Accentizer_jar/Accentizer.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Accentizer/accentizer/Accentizer.class" afterPath="$PROJECT_DIR$/out/production/Accentizer/accentizer/Accentizer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Accentizer/accentizer/TreeReader.class" afterPath="$PROJECT_DIR$/out/production/Accentizer/accentizer/TreeReader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/accentizer/Accentizer.java" afterPath="$PROJECT_DIR$/src/accentizer/Accentizer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/accentizer/Node.java" afterPath="$PROJECT_DIR$/src/accentizer/Node.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/accentizer/TreeReader.java" afterPath="$PROJECT_DIR$/src/accentizer/TreeReader.java" />
     </list>
     <ignored path="Accentizer.iws" />
@@ -35,91 +35,61 @@
     <favorites_list name="Accentizer" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Accentizer.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/accentizer/Accentizer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.30307943">
-                  <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
-                    <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
-                    <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
-                    <element signature="method#normalize#0;class#Accentizer#0" expanded="false" />
-                    <element signature="method#isPunctuation#0;class#Accentizer#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DecisionTree.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/accentizer/DecisionTree.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/accentizer/Node.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TreeReader.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/accentizer/TreeReader.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="TreeReader.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/accentizer/TreeReader.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7795786">
-                  <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/accentizer/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Accentizer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/accentizer/Accentizer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5802469">
+              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1623#1624#0" expanded="true" />
+                <element signature="e#1660#1661#0" expanded="true" />
+                <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
+                <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
+                <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
+                <element signature="method#normalize#0;class#Accentizer#0" expanded="false" />
+                <element signature="method#isPunctuation#0;class#Accentizer#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DecisionTree.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/accentizer/DecisionTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/accentizer/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/accentizer/TreeReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -144,9 +114,9 @@
         <option value="$PROJECT_DIR$/src/DecisionTree.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/accentizer/DecisionTree.java" />
+        <option value="$PROJECT_DIR$/src/accentizer/Node.java" />
         <option value="$PROJECT_DIR$/src/accentizer/Main.java" />
         <option value="$PROJECT_DIR$/src/accentizer/TreeReader.java" />
-        <option value="$PROJECT_DIR$/src/accentizer/Node.java" />
         <option value="$PROJECT_DIR$/src/accentizer/Accentizer.java" />
       </list>
     </option>
@@ -189,7 +159,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -265,6 +234,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -588,13 +558,13 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29891303" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29891303" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2652174" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19739583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -634,9 +604,56 @@
     <entry file="file://$PROJECT_DIR$/src/accentizer/Accentizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="57" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
+            <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
+            <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
+            <element signature="method#normalize#0;class#Accentizer#0" expanded="false" />
+            <element signature="method#isPunctuation#0;class#Accentizer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accentizer/DecisionTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accentizer/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accentizer/TreeReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accentizer/Accentizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="35" column="77" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
             <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
@@ -674,22 +691,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/accentizer/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/accentizer/Accentizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
             <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
@@ -741,6 +750,8 @@
           <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
             <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
@@ -784,6 +795,8 @@
           <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
             <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
@@ -817,6 +830,8 @@
           <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
             <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
@@ -860,6 +875,8 @@
           <caret line="64" column="30" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
             <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
@@ -893,6 +910,8 @@
           <caret line="64" column="30" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
             <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
@@ -926,6 +945,8 @@
           <caret line="64" column="30" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
             <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
@@ -959,6 +980,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
             <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
@@ -992,6 +1015,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
             <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
@@ -1026,10 +1051,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/accentizer/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/accentizer/TreeReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1038,25 +1063,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/accentizer/Accentizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30307943">
-          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.5802469">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
             <element signature="method#initializeAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#initializeUpperAccentMap#0;class#Accentizer#0" expanded="false" />
             <element signature="method#padText#0;class#Accentizer#0" expanded="false" />
             <element signature="method#normalize#0;class#Accentizer#0" expanded="false" />
             <element signature="method#isPunctuation#0;class#Accentizer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/accentizer/TreeReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7795786">
-          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
