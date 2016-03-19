@@ -50,7 +50,7 @@ public class Accentizer {
     }
 
     public String accentize(String text) {
-        String result = " ";
+        String result = "";
         String paddedText = padText(text);
 
         int fullWindow = 2 * window + 1;
