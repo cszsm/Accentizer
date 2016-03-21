@@ -3,7 +3,7 @@ package accentizer;
 /**
  * Created by zscse on 2016. 03. 21..
  */
-public class StringTransformer {
+class StringTransformer {
 
     public String pad(String text, int window) {
         String paddedText = "";
