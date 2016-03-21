@@ -26,23 +26,23 @@ public class Accentizer {
     }
 
     public void load(String baseDir) throws IOException {
-        // I don't know yet if the iteration order is relevant
+
         for (Map.Entry<Character, List<String>> vowels :
                 accentMap.entrySet()) {
             char latinizedVowel = vowels.getKey();
             String fileName = baseDir + "/" + latinizedVowel;
 
             TreeReader treeReader = new TreeReader();
-//            DecisionTree decisionTree = treeReader.readFromFile(fileName);
             DecisionTree decisionTree = treeReader.readInputStream(fileName);
             trees.put(latinizedVowel, decisionTree);
-//            trees.get(latinizedVowel).readFromFile(fileName);
+            treeReader.close();
         }
     }
 
     public void load(char c, InputStream inputStream) throws IOException {
         TreeReader treeReader = new TreeReader();
         trees.put(c, treeReader.readInputSream(inputStream));
+        treeReader.close();
     }
 
     public Set<Character> getVowels() {
@@ -51,13 +51,16 @@ public class Accentizer {
 
     public String accentize(String text) {
         String result = "";
-        String paddedText = padText(text);
+
+        StringTransformer transformer = new StringTransformer();
+
+        String paddedText = transformer.pad(text, window);
 
         int fullWindow = 2 * window + 1;
         LinkedList<Character> slideWindow = new LinkedList<>();
 
         for (int i = 0; i < fullWindow; i++) {
-            slideWindow.addLast(normalize(paddedText.charAt(i)));
+            slideWindow.addLast(transformer.normalize(paddedText.charAt(i)));
         }
 
         int inputPosition = window;
@@ -68,26 +71,19 @@ public class Accentizer {
 
                 if (Character.isUpperCase(paddedText.charAt(inputPosition))) {
                     result += upperAccentMap.get(middle).get(label);
-//                    result.add(upperAccentMap.get(middle).get(label));
-//                    System.out.print(upperAccentMap.get(middle).get(label));
                 } else {
                     result += accentMap.get(middle).get(label);
-//                    result.add(accentMap.get(middle).get(label));
-//                    System.out.print(accentMap.get(middle).get(label));
                 }
             } else {
                 result += paddedText.charAt(inputPosition);
-//                result.add(paddedText.charAt(inputPosition));
-//                System.out.print(paddedText.charAt(inputPosition));
             }
 
             inputPosition++;
 
-            char norm = normalize(paddedText.charAt(i));
+            char norm = transformer.normalize(paddedText.charAt(i));
             slideWindow.addLast(norm);
             slideWindow.removeFirst();
         }
-//        System.out.println();
         return result;
     }
 
@@ -116,8 +112,6 @@ public class Accentizer {
         uVowels.add("ü");
         uVowels.add("ű");
 
-        // HashMap for maximum speed
-        // TreeMap for sorted collection
         Map<Character, List<String>> accentMap = new HashMap<>();
         accentMap.put('a', aVowels);
         accentMap.put('e', eVowels);
@@ -161,51 +155,5 @@ public class Accentizer {
         accentMap.put('u', uVowels);
 
         return accentMap;
-    }
-
-    // There should be a new class for this function
-    private String padText(String text) {
-        String paddedText = "";
-        char padding = '_';
-
-        for (int i = 0; i < window - 1; i++) {
-            paddedText += padding;
-        }
-
-        paddedText += ' ' + text + '\n' + ' ';
-
-        for (int i = 0; i < window - 1; i++) {
-            paddedText += padding;
-        }
-
-        return paddedText;
-    }
-
-    // Maybe there should be another class for this function
-    private static char normalize(char c) {
-        if (Character.isWhitespace(c)) {
-            return ' ';
-        }
-        if (Character.isDigit(c)) {
-            return '0';
-        }
-        if (isPunctuation(c)) {
-            return '_';
-        }
-        if (Character.isAlphabetic(c)) {
-            return Character.toLowerCase(c);
-        }
-        return '*';
-    }
-
-    // I don't know where this should be...
-    private static boolean isPunctuation(char c) {
-        String punctuations = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-        for (int i = 0; i < punctuations.length(); i++) {
-            if (c == punctuations.charAt(i)) {
-                return true;
-            }
-        }
-        return false;
     }
 }

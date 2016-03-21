@@ -11,27 +11,6 @@ class TreeReader {
 
     private Closeable closeable;
 
-    // NOTE: need a method that closes the Scanner or BufferedReader
-
-    public DecisionTree readFromFile(String path) throws FileNotFoundException {
-        ArrayList<Node> tree = new ArrayList<>();
-
-        File file = new File(path);
-        Scanner scanner = new Scanner(file);
-        closeable = scanner;
-
-        int nodeCount = scanner.nextInt();
-        tree.ensureCapacity(nodeCount);
-        int window = scanner.nextInt();
-
-        scanner.nextLine();
-        while (scanner.hasNextLine()) {
-            tree.add(new Node(scanner.nextLine(), window));
-        }
-
-        return new DecisionTree(tree, window);
-    }
-
     public DecisionTree readInputStream(String path) throws IOException {
         FileInputStream fileInputStream = new FileInputStream(path);
         return readInputSream(fileInputStream);
