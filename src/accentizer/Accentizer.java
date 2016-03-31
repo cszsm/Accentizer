@@ -1,6 +1,5 @@
 package accentizer;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
@@ -50,7 +49,7 @@ public class Accentizer {
     }
 
     public String accentize(String text) {
-        String result = "";
+        String accentizedText = "";
 
         StringTransformer transformer = new StringTransformer();
 
@@ -70,12 +69,12 @@ public class Accentizer {
                 int label = trees.get(middle).classify(slideWindow);
 
                 if (Character.isUpperCase(paddedText.charAt(inputPosition))) {
-                    result += upperAccentMap.get(middle).get(label);
+                    accentizedText += upperAccentMap.get(middle).get(label);
                 } else {
-                    result += accentMap.get(middle).get(label);
+                    accentizedText += accentMap.get(middle).get(label);
                 }
             } else {
-                result += paddedText.charAt(inputPosition);
+                accentizedText += paddedText.charAt(inputPosition);
             }
 
             inputPosition++;
@@ -84,7 +83,41 @@ public class Accentizer {
             slideWindow.addLast(norm);
             slideWindow.removeFirst();
         }
-        return result;
+        return accentizedText;
+    }
+
+    public String deaccentize(String text) {
+        String deaccentizedText = "";
+
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+
+            switch (c) {
+                case 'á':
+                    c = 'a';
+                    break;
+                case 'é':
+                    c = 'e';
+                    break;
+                case 'í':
+                    c = 'i';
+                    break;
+                case 'ó':
+                case 'ö':
+                case 'ő':
+                    c = 'o';
+                    break;
+                case 'ú':
+                case 'ü':
+                case 'ű':
+                    c = 'u';
+                    break;
+            }
+
+            deaccentizedText += c;
+        }
+
+        return deaccentizedText;
     }
 
     private Map<Character, List<String>> initializeAccentMap() {
