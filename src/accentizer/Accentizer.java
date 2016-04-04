@@ -49,7 +49,7 @@ public class Accentizer {
     }
 
     public String accentize(String text) {
-        String accentizedText = "";
+        StringBuilder accentizedText = new StringBuilder();
 
         StringTransformer transformer = new StringTransformer();
 
@@ -69,12 +69,12 @@ public class Accentizer {
                 int label = trees.get(middle).classify(slideWindow);
 
                 if (Character.isUpperCase(paddedText.charAt(inputPosition))) {
-                    accentizedText += upperAccentMap.get(middle).get(label);
+                    accentizedText.append(upperAccentMap.get(middle).get(label));
                 } else {
-                    accentizedText += accentMap.get(middle).get(label);
+                    accentizedText.append(accentMap.get(middle).get(label));
                 }
             } else {
-                accentizedText += paddedText.charAt(inputPosition);
+                accentizedText.append(paddedText.charAt(inputPosition));
             }
 
             inputPosition++;
@@ -83,11 +83,11 @@ public class Accentizer {
             slideWindow.addLast(norm);
             slideWindow.removeFirst();
         }
-        return accentizedText;
+        return accentizedText.toString();
     }
 
     public String deaccentize(String text) {
-        String deaccentizedText = "";
+        StringBuilder deaccentizedText = new StringBuilder();
 
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
@@ -114,10 +114,10 @@ public class Accentizer {
                     break;
             }
 
-            deaccentizedText += c;
+            deaccentizedText.append(c);
         }
 
-        return deaccentizedText;
+        return deaccentizedText.toString();
     }
 
     private Map<Character, List<String>> initializeAccentMap() {

@@ -6,20 +6,20 @@ package accentizer;
 class StringTransformer {
 
     public String pad(String text, int window) {
-        String paddedText = "";
+        StringBuilder paddedText = new StringBuilder();
         char padding = '_';
 
         for (int i = 0; i < window - 1; i++) {
-            paddedText += padding;
+            paddedText.append(padding);
         }
 
-        paddedText += ' ' + text + '\n' + ' ';
+        paddedText.append(' ' + text + '\n' + ' ');
 
         for (int i = 0; i < window - 1; i++) {
-            paddedText += padding;
+            paddedText.append(padding);
         }
 
-        return paddedText;
+        return paddedText.toString();
     }
 
     public char normalize(char c) {
