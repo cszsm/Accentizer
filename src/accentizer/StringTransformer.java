@@ -32,7 +32,7 @@ class StringTransformer {
         if (isPunctuation(c)) {
             return '_';
         }
-        if (Character.isAlphabetic(c)) {
+        if (Character.isLetter(c)) {
             return Character.toLowerCase(c);
         }
         return '*';
